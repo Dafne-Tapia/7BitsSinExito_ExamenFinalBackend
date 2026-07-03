@@ -9,7 +9,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/contactos")
-@CrossOrigin(originPatterns = "*", allowCredentials = "true")
 @Tag(name = "Contacto", description = "API para gestionar contactos de AAPOS")
 public class ContactoController {
 
