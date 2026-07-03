@@ -1,3 +1,8 @@
+# Variables de entorno / secretos
+.env
+
+# Gradle
+.gradle/
 HELP.md
 .gradle
 build/
