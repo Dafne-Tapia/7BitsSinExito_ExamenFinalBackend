@@ -27,6 +27,11 @@ public class ProcedimientoController {
         return procedimientoService.buscarPorId(id);
     }
 
+    @GetMapping("/servicio/{servicioId}")
+    public List<Procedimiento> listarPorServicio(@PathVariable Long servicioId) {
+        return procedimientoService.listarPorServicio(servicioId);
+    }
+
     @PostMapping
     public Procedimiento guardar(@RequestBody Procedimiento procedimiento) {
         return procedimientoService.guardar(procedimiento);
