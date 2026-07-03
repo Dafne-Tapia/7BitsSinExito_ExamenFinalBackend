@@ -29,6 +29,10 @@ public class DocumentoService {
     public Documento guardar(Documento documento) {
         return documentoRepository.save(documento);
     }
+    public Documento actualizar(Long id, Documento documento) {
+        documento.setId(id);
+        return documentoRepository.save(documento);
+    }
 
     public void eliminar(Long id) {
         documentoRepository.deleteById(id);
