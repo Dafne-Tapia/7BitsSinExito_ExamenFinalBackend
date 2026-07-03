@@ -1,9 +1,15 @@
 package _BitsSinExito.ExamenFinal.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "procedimientos")
+@Table(name = "procedimiento")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Procedimiento {
 
     @Id
@@ -18,16 +24,4 @@ public class Procedimiento {
 
     @Column(name = "orden")
     private Integer orden;
-
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
-    public Long getServicioId() { return servicioId; }
-    public void setServicioId(Long servicioId) { this.servicioId = servicioId; }
-
-    public String getPaso() { return paso; }
-    public void setPaso(String paso) { this.paso = paso; }
-
-    public Integer getOrden() { return orden; }
-    public void setOrden(Integer orden) { this.orden = orden; }
 }
