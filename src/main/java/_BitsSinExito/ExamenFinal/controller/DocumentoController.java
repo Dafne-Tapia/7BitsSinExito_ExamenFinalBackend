@@ -36,7 +36,10 @@ public class DocumentoController {
     public ResponseEntity<Documento> crear(@RequestBody Documento documento) {
         return ResponseEntity.ok(documentoService.guardar(documento));
     }
-
+    @PutMapping("/{id}")
+    public ResponseEntity<Documento> actualizar(@PathVariable Long id, @RequestBody Documento documento) {
+        return ResponseEntity.ok(documentoService.actualizar(id, documento));
+    }
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         documentoService.eliminar(id);
